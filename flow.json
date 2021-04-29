@@ -2,7 +2,14 @@
     {
         "id": "2f22a3cd.f2c92c",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Temp Rpi Mias Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "eef5192.21ab3e8",
+        "type": "tab",
+        "label": "Temp Rpi Curso",
         "disabled": false,
         "info": ""
     },
@@ -10,7 +17,21 @@
         "id": "4e420c9.e1b36f4",
         "type": "tab",
         "label": "Flow Raspberry",
-        "disabled": true,
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7d8beb3.4aa0714",
+        "type": "tab",
+        "label": "temperatura  1 email",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "49f521d1.fe22f",
+        "type": "tab",
+        "label": "temperatura 2 email",
+        "disabled": false,
         "info": ""
     },
     {
@@ -108,39 +129,40 @@
     {
         "id": "4572a55c.f43dac",
         "type": "ui_tab",
-        "name": "Home",
+        "name": "Datos de las RaspberryPi",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "64882ffa.0a3c9",
         "type": "ui_group",
-        "name": "Temperatura",
+        "name": "Temperatura Rpi1",
         "tab": "4572a55c.f43dac",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false
     },
     {
         "id": "b695d6d5.c3db08",
         "type": "ui_group",
-        "name": "CPU",
+        "name": "CPU Rpi1",
         "tab": "4572a55c.f43dac",
         "order": 2,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false
     },
     {
         "id": "b0f16f57.d6078",
         "type": "ui_group",
-        "name": "Memoria",
+        "name": "Memoria Rpi1",
         "tab": "4572a55c.f43dac",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false
     },
     {
@@ -240,6 +262,392 @@
         }
     },
     {
+        "id": "9331a277.98399",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1104985a.b82b88",
+        "type": "ui_group",
+        "name": "Temperatura Rpi2",
+        "tab": "4572a55c.f43dac",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "5f8cce8e.9a35d",
+        "type": "ui_group",
+        "name": "CPU Rpi2",
+        "tab": "4572a55c.f43dac",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "553aaa72.03c374",
+        "type": "ui_group",
+        "name": "Memoria Rpi2",
+        "tab": "4572a55c.f43dac",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "55076680.6ae428",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d7066194.e2982",
+        "type": "ui_group",
+        "name": "Temperatura Rpi1",
+        "tab": "47022ba7.fe07d4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "47022ba7.fe07d4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7ab09628.5652c8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "52792d2e.21d7e4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "86b63d5d.786e",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "be318ad6.3fb038",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ae25812d.96301",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "dd435f9a.d1752",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b695d6d5.c3db08",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2fdcf6ba.44461a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b6c9da88.f54bf8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1359e515.85b11b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5046516c.8c665",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "86ceac0d.341f6",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e8b7a27c.95b15",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b0f16f57.d6078",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "866113d0.a9f43",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9e6cc3e1.d61d4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f8ecafc1.c9faf",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8a996bd8.a7cf98",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d1999748.073ae8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a676f7fb.45d6a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5f8cce8e.9a35d",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "92ed11ca.71a84",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d5f6474.7bd0eb8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d012dc9f.71bb1",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8415ecb3.2c5fa",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6fa0b877.dfa438",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "24216fa0.047bc",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "553aaa72.03c374",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "79e36935.e4c0d8",
+        "type": "ui_tab",
+        "name": "Temperaturas Rpi Curso",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "95b7b21b.1e985",
+        "type": "ui_group",
+        "name": "Marcos",
+        "tab": "79e36935.e4c0d8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3bc8b1f2.3281fe",
+        "type": "ui_group",
+        "name": "Alex",
+        "tab": "79e36935.e4c0d8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bdfadb0.f8f9728",
+        "type": "ui_group",
+        "name": "Enrique 1",
+        "tab": "79e36935.e4c0d8",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bb9290ca.145a8",
+        "type": "ui_group",
+        "name": "Enrique 2",
+        "tab": "79e36935.e4c0d8",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "321b0779.f367b8",
+        "type": "ui_group",
+        "name": "Eneko 1",
+        "tab": "79e36935.e4c0d8",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "170035f8.b5feda",
+        "type": "ui_group",
+        "name": "Eneko 2",
+        "tab": "79e36935.e4c0d8",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "ab7f195c.aa0308",
         "type": "switch",
         "z": "88bbe218.63673",
@@ -282,8 +690,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "RPi Temp.",
-        "x": 390,
-        "y": 140,
+        "x": 330,
+        "y": 120,
         "wires": [
             [
                 "14f0a295.59181d"
@@ -302,8 +710,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "CPU Load",
-        "x": 390,
-        "y": 220,
+        "x": 330,
+        "y": 200,
         "wires": [
             [
                 "ba819184.c072b"
@@ -322,8 +730,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "Free Memory",
-        "x": 390.0000190734863,
-        "y": 284.22223567962646,
+        "x": 330.0000190734863,
+        "y": 264.22223567962646,
         "wires": [
             [
                 "daf6433c.bad81"
@@ -340,8 +748,8 @@
         "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 580,
-        "y": 120,
+        "x": 520,
+        "y": 100,
         "wires": [
             [
                 "3c8ae2a0.ff9c5e"
@@ -356,8 +764,8 @@
         "func": "str = msg.payload\nmsg.payload = parseInt(str.substring(0,str.length - 1));\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 594.7778091430664,
-        "y": 273.66666316986084,
+        "x": 520,
+        "y": 260,
         "wires": [
             [
                 "b74d6862.d56368"
@@ -400,12 +808,17 @@
         "type": "mqtt out",
         "z": "4e420c9.e1b36f4",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/Temperatura",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Temperatura",
         "qos": "",
         "retain": "",
-        "broker": "ea5e934f.a933",
-        "x": 890,
-        "y": 120,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9331a277.98399",
+        "x": 870,
+        "y": 100,
         "wires": []
     },
     {
@@ -413,12 +826,17 @@
         "type": "mqtt out",
         "z": "4e420c9.e1b36f4",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/CPU",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/CPU",
         "qos": "",
         "retain": "",
-        "broker": "ea5e934f.a933",
-        "x": 830,
-        "y": 200,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9331a277.98399",
+        "x": 670,
+        "y": 180,
         "wires": []
     },
     {
@@ -426,12 +844,17 @@
         "type": "mqtt out",
         "z": "4e420c9.e1b36f4",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/Memory",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Memory",
         "qos": "",
         "retain": "",
-        "broker": "ea5e934f.a933",
-        "x": 900,
-        "y": 280,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9331a277.98399",
+        "x": 840,
+        "y": 260,
         "wires": []
     },
     {
@@ -439,10 +862,12 @@
         "type": "mqtt in",
         "z": "2f22a3cd.f2c92c",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/Temperatura",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Temperatura",
         "qos": "2",
         "datatype": "auto",
-        "broker": "ea5e934f.a933",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
         "x": 250,
         "y": 120,
         "wires": [
@@ -457,10 +882,12 @@
         "type": "mqtt in",
         "z": "2f22a3cd.f2c92c",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/CPU",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/CPU",
         "qos": "2",
         "datatype": "auto",
-        "broker": "ea5e934f.a933",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
         "x": 220,
         "y": 180,
         "wires": [
@@ -475,10 +902,12 @@
         "type": "mqtt in",
         "z": "2f22a3cd.f2c92c",
         "name": "",
-        "topic": "aprendiendonodered/alumno00/raspberrypi/Memoria",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Memory",
         "qos": "2",
         "datatype": "auto",
-        "broker": "ea5e934f.a933",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
         "x": 240,
         "y": 240,
         "wires": [
@@ -495,11 +924,11 @@
         "name": "",
         "group": "64882ffa.0a3c9",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 3,
         "gtype": "gage",
         "title": "gauge",
-        "label": "units",
+        "label": "Grados",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -508,7 +937,7 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "50",
+        "seg1": "30",
         "seg2": "75",
         "x": 680,
         "y": 120,
@@ -521,11 +950,11 @@
         "name": "",
         "group": "b695d6d5.c3db08",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 5,
+        "height": 3,
         "gtype": "gage",
         "title": "gauge",
-        "label": "units",
+        "label": "Velocidad",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -547,14 +976,14 @@
         "name": "",
         "group": "b0f16f57.d6078",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 5,
+        "height": 3,
         "gtype": "gage",
         "title": "gauge",
-        "label": "units",
+        "label": "Capacidad",
         "format": "{{value}}",
         "min": 0,
-        "max": "200",
+        "max": "500",
         "colors": [
             "#c80000",
             "#e6e600",
@@ -572,9 +1001,9 @@
         "z": "2f22a3cd.f2c92c",
         "name": "",
         "group": "64882ffa.0a3c9",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": 6,
+        "height": 2,
         "label": "chart",
         "chartType": "line",
         "legend": "false",
@@ -601,7 +1030,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 680,
         "y": 80,
@@ -615,9 +1043,9 @@
         "z": "2f22a3cd.f2c92c",
         "name": "",
         "group": "b695d6d5.c3db08",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": 5,
+        "height": 3,
         "label": "chart",
         "chartType": "line",
         "legend": "false",
@@ -644,7 +1072,6 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 670,
         "y": 220,
@@ -658,9 +1085,9 @@
         "z": "2f22a3cd.f2c92c",
         "name": "",
         "group": "b0f16f57.d6078",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": 5,
+        "height": 3,
         "label": "chart",
         "chartType": "line",
         "legend": "false",
@@ -687,12 +1114,1024 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "useOldStyle": false,
         "outputs": 1,
         "x": 670,
         "y": 320,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ecc207c0.c73558",
+        "type": "mqtt in",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi2/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "7bbc2b9f.106144",
+                "ec2aa4cd.e7fcf8"
+            ]
+        ]
+    },
+    {
+        "id": "57ef8085.b9348",
+        "type": "mqtt in",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi2/CPU",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
+        "x": 200,
+        "y": 500,
+        "wires": [
+            [
+                "cae60ff7.fc9c8",
+                "43e5628d.46916c"
+            ]
+        ]
+    },
+    {
+        "id": "dd2f72cc.2820a",
+        "type": "mqtt in",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi2/Memory",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": false,
+        "x": 220,
+        "y": 560,
+        "wires": [
+            [
+                "7e1c70b2.23754",
+                "a682473e.0fa1d8"
+            ]
+        ]
+    },
+    {
+        "id": "ec2aa4cd.e7fcf8",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "1104985a.b82b88",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "75",
+        "x": 660,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cae60ff7.fc9c8",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "5f8cce8e.9a35d",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "Velocidad",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "70",
+        "seg2": "90",
+        "x": 650,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7e1c70b2.23754",
+        "type": "ui_gauge",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "553aaa72.03c374",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "Capacidad",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#03c700",
+            "#e6e600",
+            "#fa0f27"
+        ],
+        "seg1": "150",
+        "seg2": "300",
+        "x": 650,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7bbc2b9f.106144",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "1104985a.b82b88",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 660,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43e5628d.46916c",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "5f8cce8e.9a35d",
+        "order": 5,
+        "width": 5,
+        "height": 3,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 650,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a682473e.0fa1d8",
+        "type": "ui_chart",
+        "z": "2f22a3cd.f2c92c",
+        "name": "",
+        "group": "553aaa72.03c374",
+        "order": 5,
+        "width": 5,
+        "height": 3,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 650,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cc84716.1410a8",
+        "type": "mqtt in",
+        "z": "7d8beb3.4aa0714",
+        "name": "Temperatura Rpi1",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "55076680.6ae428",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "4040f5b8.4e55ac"
+            ]
+        ]
+    },
+    {
+        "id": "4040f5b8.4e55ac",
+        "type": "switch",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "60",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "d2c85b5f.359648"
+            ],
+            [
+                "c9b3276f.4658e8"
+            ],
+            [
+                "90ae0d5a.56081"
+            ]
+        ]
+    },
+    {
+        "id": "8398cdbf.594db",
+        "type": "rbe",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "c2ef7105.b68c6",
+                "73d9fb0b.7191b4",
+                "30af6e33.231852"
+            ]
+        ]
+    },
+    {
+        "id": "c2ef7105.b68c6",
+        "type": "ui_text",
+        "z": "7d8beb3.4aa0714",
+        "group": "64882ffa.0a3c9",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "CPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d2c85b5f.359648",
+        "type": "change",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Baja",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "701aa64b.2100b8"
+            ]
+        ]
+    },
+    {
+        "id": "90ae0d5a.56081",
+        "type": "change",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Media",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "701aa64b.2100b8"
+            ]
+        ]
+    },
+    {
+        "id": "c9b3276f.4658e8",
+        "type": "change",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Caliente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "701aa64b.2100b8"
+            ]
+        ]
+    },
+    {
+        "id": "73d9fb0b.7191b4",
+        "type": "e-mail",
+        "z": "7d8beb3.4aa0714",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "3n3k03@gmail.com",
+        "dname": "correo 3n3k03",
+        "x": 620,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "30af6e33.231852",
+        "type": "debug",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "302333c4.52281c",
+        "type": "mqtt in",
+        "z": "49f521d1.fe22f",
+        "name": "Temperatura Rpi2",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi2/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "55076680.6ae428",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "eb21ce27.51b1e"
+            ]
+        ]
+    },
+    {
+        "id": "eb21ce27.51b1e",
+        "type": "switch",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "60",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "f80a2db7.762a1"
+            ],
+            [
+                "5f84129a.006d2c"
+            ],
+            [
+                "6f11b391.d0ad1c"
+            ]
+        ]
+    },
+    {
+        "id": "f80a2db7.762a1",
+        "type": "change",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Baja",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "503fd4ed.1f18fc"
+            ]
+        ]
+    },
+    {
+        "id": "5f84129a.006d2c",
+        "type": "change",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Caliente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 260,
+        "wires": [
+            [
+                "503fd4ed.1f18fc"
+            ]
+        ]
+    },
+    {
+        "id": "6f11b391.d0ad1c",
+        "type": "change",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Temperatura Media",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "503fd4ed.1f18fc"
+            ]
+        ]
+    },
+    {
+        "id": "6cba3eb8.f2558",
+        "type": "rbe",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "2d9caa5d.40b0c6",
+                "64cdaf7f.55a1c",
+                "cf45bf0.e48874"
+            ]
+        ]
+    },
+    {
+        "id": "2d9caa5d.40b0c6",
+        "type": "ui_text",
+        "z": "49f521d1.fe22f",
+        "group": "1104985a.b82b88",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "CPU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "64cdaf7f.55a1c",
+        "type": "debug",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "701aa64b.2100b8",
+        "type": "change",
+        "z": "7d8beb3.4aa0714",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Temperatura Raspberry 1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "8398cdbf.594db"
+            ]
+        ]
+    },
+    {
+        "id": "cf45bf0.e48874",
+        "type": "e-mail",
+        "z": "49f521d1.fe22f",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "3n3k03@gmail.com",
+        "dname": "envio correo a 3n3k03",
+        "x": 660,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "503fd4ed.1f18fc",
+        "type": "change",
+        "z": "49f521d1.fe22f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Temperatura Raspberry 2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "6cba3eb8.f2558"
+            ]
+        ]
+    },
+    {
+        "id": "25cf0a95.966356",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "95b7b21b.1e985",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Marcos",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 440,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "24461838.0aa7f8",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Marcos",
+        "topic": "aprendiendonodered21/marcos/temperaturaRpi",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "25cf0a95.966356"
+            ]
+        ]
+    },
+    {
+        "id": "222a6801.0b1558",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Alex",
+        "topic": "aprendiendonodered21/alex/raspberrypi/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 85,
+        "y": 117,
+        "wires": [
+            [
+                "1aae6a5.6b32396"
+            ]
+        ]
+    },
+    {
+        "id": "1aae6a5.6b32396",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "3bc8b1f2.3281fe",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Alex",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 435,
+        "y": 117,
+        "wires": []
+    },
+    {
+        "id": "66fe1164.a45a2",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Enrique 1",
+        "topic": "aprendiendonodered21/enrique/raspberrypi1/enrique/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 95,
+        "y": 177,
+        "wires": [
+            [
+                "d2be5047.91948"
+            ]
+        ]
+    },
+    {
+        "id": "d2be5047.91948",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "bdfadb0.f8f9728",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Enrique 1",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 425,
+        "y": 177,
+        "wires": []
+    },
+    {
+        "id": "b074c17f.0df53",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Enrique 2",
+        "topic": "aprendiendonodered21/enrique/raspberrypi2/enrique/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 95,
+        "y": 237,
+        "wires": [
+            [
+                "547e6a20.1db6a4"
+            ]
+        ]
+    },
+    {
+        "id": "547e6a20.1db6a4",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "bb9290ca.145a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Enrique 2",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 425,
+        "y": 237,
+        "wires": []
+    },
+    {
+        "id": "64093f33.b12e6",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Eneko 1",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi1/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 95,
+        "y": 297,
+        "wires": [
+            [
+                "2041c369.5988bc"
+            ]
+        ]
+    },
+    {
+        "id": "2041c369.5988bc",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "321b0779.f367b8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Eneko 1",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 425,
+        "y": 297,
+        "wires": []
+    },
+    {
+        "id": "e2f7c54d.9b3ea8",
+        "type": "mqtt in",
+        "z": "eef5192.21ab3e8",
+        "name": "Rpi Eneko 2",
+        "topic": "aprendiendonodered21/Eneko/raspberrypi2/Temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9331a277.98399",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 95,
+        "y": 357,
+        "wires": [
+            [
+                "d9a3f036.518af"
+            ]
+        ]
+    },
+    {
+        "id": "d9a3f036.518af",
+        "type": "ui_gauge",
+        "z": "eef5192.21ab3e8",
+        "name": "",
+        "group": "170035f8.b5feda",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Eneko 2",
+        "label": "Grados",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "60",
+        "x": 425,
+        "y": 357,
+        "wires": []
     }
 ]
